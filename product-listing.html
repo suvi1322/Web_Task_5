@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="product-listing.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Product Listing</h1>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search products..." />
+      <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Accessories">Accessories</option>
+        <option value="Books">Books</option>
+      </select>
+    </div>
+
+    <div class="product-list" id="productList"></div>
+
+    <a href="index.html">← Back to Portfolio</a>
+  </div>
+
+  <script src="product-listing.js"></script>
+</body>
+</html>

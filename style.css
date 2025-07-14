@@ -1,0 +1,147 @@
+/* ===== CSS VARIABLES FOR THEMING ===== */
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #222;
+  --card-bg: #ffffff;
+  --header-bg: #4a90e2;
+  --button-bg: #4a90e2;
+  --button-text: #ffffff;
+  --link-color: #333;
+  --input-bg: #ffffff;
+  --input-text: #222;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f4f4f4;
+  --card-bg: #1f1f1f;
+  --header-bg: #2a2a2a;
+  --button-bg: #444;
+  --button-text: #fff;
+  --link-color: #f4f4f4;
+  --input-bg: #2e2e2e;
+  --input-text: #f4f4f4;
+}
+
+/* ===== GLOBAL STYLES ===== */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button#toggleMode {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: var(--header-bg);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about, .projects, .contact {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about img {
+  width: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== PROJECT SECTION ===== */
+.project-link {
+  text-decoration: none;
+  color: var(--link-color);
+  display: block;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+/* ===== CONTACT FORM ===== */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: var(--input-bg);
+  color: var(--input-text);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+button[type="submit"] {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.social-links a {
+  color: var(--link-color);
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
